@@ -1,41 +1,59 @@
-# MetaAI's Llama 4 and DeeSeek-R1 compared using RAG
+# Llama4_DeepSeek_RAG
 
-This tutorials build a RAG app powered by [LlamaIndex](https://www.llamaindex.ai/) to compare Llama 4 and DeeSeek-R1. We have used [Opik](https://github.com/comet-ml/opik) for evaluation and observability, which is 100% open-source and nicely integrates with alsmot all popular frameworks.
+AI-powered PDF Question Answering application using Retrieval-Augmented Generation (RAG).
 
-You can quickly test it on your own complex docs [here](https://eyelevel.ai/).
+This project compares **Llama-4** and **DeepSeek-R1** AI models for answering questions from uploaded PDF documents.
 
-### Setup
+## Features
 
-To sync dependencies, run:
+✅ Upload PDF files  
+✅ Ask questions from documents  
+✅ AI-powered document understanding  
+✅ Compare Llama-4 and DeepSeek-R1 responses  
+✅ Fast response using Groq API  
+✅ Built with Streamlit + LlamaIndex
 
-```sh
+## Technologies Used
+
+- Python
+- Streamlit
+- LlamaIndex
+- Groq API
+- RAG (Retrieval-Augmented Generation)
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repo-link>
+cd Llama4_DeepSeek_RAG
+```
+
+Install dependencies:
+
+```bash
 uv sync
 ```
 
-### Environment Variables
+Run the project:
 
-You need to set up the following environment variables:
-
-```sh
-GROQ_API_KEY=...
-OPENAI_API_KEY=...
+```bash
+streamlit run app.py
 ```
-OpenAI API key needed for using o1 and a judge during evaluation
 
-Ensure these variables are configured correctly before running the application use `.env.example` as reference and create your own `.env` file.
+## Environment Variables
 
-Run the streamlit app using `streamlit run app.py`
+Create a `.env` file and add:
 
----
+```env
+GROQ_API_KEY=your_api_key
+OPENAI_API_KEY=your_api_key
+```
 
-## 📬 Stay Updated with Our Newsletter!
-**Get a FREE Data Science eBook** 📖 with 150+ essential lessons in Data Science when you subscribe to our newsletter! Stay in the loop with the latest tutorials, insights, and exclusive resources. [Subscribe now!](https://join.dailydoseofds.com)
+## How It Works
 
-[![Daily Dose of Data Science Newsletter](https://github.com/patchy631/ai-engineering/blob/main/resources/join_ddods.png)](https://join.dailydoseofds.com)
-
----
-
-## Contribution
-
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
-
+1. Upload a PDF file  
+2. Select the AI model  
+3. Ask questions about the document  
+4. The system uses RAG to retrieve information and generate answers.
